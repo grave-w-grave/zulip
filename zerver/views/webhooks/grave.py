@@ -12,11 +12,11 @@ from six import text_type
 from typing import Dict, Any, Iterable, Optional
 
 
-@api_key_only_webhook_view('HelloWorld')
+@api_key_only_webhook_view('grave')
 @has_request_variables
-def api_helloworld_webhook(request, user_profile, client,
+def api_grave_webhook(request, user_profile, client,
                            payload=REQ(argument_type='body'), stream=REQ(default='test'),
-                           topic=REQ(default='Hello World')):
+                           topic=REQ(default='Gravy recipe')):
     # type: (HttpRequest, UserProfile, Client, Dict[str, Iterable[Dict[str, Any]]], text_type, Optional[text_type]) -> HttpResponse
 
     # construct the body of the message
